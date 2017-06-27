@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import copy from 'copy-to-clipboard';
 
 import OpressedEngine from './OpressedEngine';
 import ExclusivePanel from './ExclusivePanel';
@@ -36,6 +37,10 @@ export default class Inclusivizer extends Component {
             inclusiveText: OpressedEngine.makeAware(this.state.exclusiveText, newLevel),
         })
     }
+
+    handleCopyText(e) {
+        copy(this.state.inclusiveText);
+    }
     
     render() {
         const { exclusiveText, inclusiveText, pelotudezLevel: currentLevel } = this.state;
@@ -48,8 +53,13 @@ export default class Inclusivizer extends Component {
             <div className="pure-g">
                 <div className="pure-u-1">
                     <h1 className="title">
-                        Inclusivizer
+                        Inclusivizer 
                     </h1>
+                    <div className="button-copy-container">
+                        <button onClick={this.handleCopyText.bind(this)}>
+                            Copy Inclusive
+                        </button>
+                    </div>
                     <div className="range-container">
                         <label for="pelotudezLevel">
                             Nivel de Pelotudes: {currentLevel+1} - {pelotudezLevel[currentLevel].name}

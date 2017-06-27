@@ -1,3 +1,4 @@
+import tildeRemover from './tildeRemover';
 import { pelotudezLevel } from '../config';
 
 export default class OpressedEngine {
@@ -8,7 +9,7 @@ export default class OpressedEngine {
         }
 
         const levelObj = pelotudezLevel.find( (e) => e.value===level );
-        const inclusiveText = levelObj.parser(exclusiveText);
+        const inclusiveText = levelObj.parser( tildeRemover(exclusiveText) );
         
 
         return inclusiveText;

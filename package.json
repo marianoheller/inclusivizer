@@ -4,6 +4,7 @@
   "homepage": "https://marianoheller.github.io/inclusivizer",
   "private": true,
   "dependencies": {
+    "copy-to-clipboard": "^3.0.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },

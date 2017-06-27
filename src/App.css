@@ -10,6 +10,15 @@ body {
   margin: 20px 0;
 }
 
+.button-copy-container {
+  margin-top: 10px;
+  margin-right: 10px;
+  position:absolute;
+  top:0;
+  right:0;
+  font-size: small;
+}
+
 .panel-container {
   padding: 0 10px;
   font-family: 'Open Sans', sans-serif;
@@ -20,6 +29,7 @@ textarea {
   margin: 0 auto;
   resize: vertical;
   min-height: 400px;
+  color: black;
 }
 
 .panel-container > div > * {
