@@ -57,7 +57,7 @@ export default class Inclusivizer extends Component {
                     </h1>
                     <div className="button-copy-container">
                         <button onClick={this.handleCopyText.bind(this)}>
-                            Copy Inclusive
+                            Copy
                         </button>
                     </div>
                     <div className="range-container">
