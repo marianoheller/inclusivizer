@@ -53,3 +53,9 @@ hr {
 .range-container > input {
   width: 200px;
 }
+
+@media screen and (max-width: 400px) {
+    .range-container > input {
+      width: 180px;
+    }
+}

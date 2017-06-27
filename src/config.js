@@ -9,7 +9,7 @@ export const pelotudezLevel = [
     value: 0,
     parser: (text) => {
       const ret = text
-      .split(/[^a-zA-Z\d:]/)
+      .split(/[^a-zA-Z\d.,;:]/)
       .map( (e) => {
         return e.split("").reverse().join("").replace(/[ao]/, "x").split("").reverse().join("");
       })
@@ -22,7 +22,7 @@ export const pelotudezLevel = [
     value: 1,
     parser: (text) => {
       const ret = text
-      .split(/[^a-zA-Z\d:]/)
+      .split(/[^a-zA-Z\d.,;:]/)
       .map( (e) => {
         return e.replace(/[ao]/g, "x");
       })
