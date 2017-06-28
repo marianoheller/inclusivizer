@@ -41,6 +41,14 @@ export default class Inclusivizer extends Component {
     handleCopyText(e) {
         copy(this.state.inclusiveText);
     }
+
+    handleClearText(e) {
+        this.setState( {
+            ...this.state,
+            exclusiveText: "",
+            inclusiveText: "",
+        })
+    }
     
     render() {
         const { exclusiveText, inclusiveText, pelotudezLevel: currentLevel } = this.state;
@@ -55,13 +63,18 @@ export default class Inclusivizer extends Component {
                     <h1 className="title">
                         Inclusivizer 
                     </h1>
+                    <div className="button-clear-container">
+                        <button onClick={this.handleClearText.bind(this)}>
+                            Clear
+                        </button>
+                    </div>
                     <div className="button-copy-container">
                         <button onClick={this.handleCopyText.bind(this)}>
                             Copy
                         </button>
                     </div>
                     <div className="range-container">
-                        <label for="pelotudezLevel">
+                        <label htmlFor="pelotudezLevel">
                             Nivel de Pelotudes: {currentLevel+1} - {pelotudezLevel[currentLevel].name}
                         </label>
                         <input 

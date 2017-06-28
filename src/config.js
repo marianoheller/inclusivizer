@@ -1,7 +1,12 @@
 
 export const initialLevel = 0;
 
-export const initialText = `Traductor gratuito online en elmundo.es. Traductor de Inglés, italiano francés y alemán. Traducción de texto y páginas web.`
+export const initialText = `Aquí me pongo á cantar
+al compás de la vigüela,
+que el hombre que lo desvela
+una pena estrordinaria,
+como la ave solitaria
+con el cantar se consuela.`
 
 export const pelotudezLevel = [
   {
@@ -9,7 +14,7 @@ export const pelotudezLevel = [
     value: 0,
     parser: (text) => {
       const ret = text
-      .split(/[^a-zA-Z\d.,;:]/)
+      .split(/[^a-zA-Z\d\n.,;:]/)
       .map( (e) => {
         return e.split("").reverse().join("").replace(/[ao]/, "x").split("").reverse().join("");
       })
@@ -22,7 +27,7 @@ export const pelotudezLevel = [
     value: 1,
     parser: (text) => {
       const ret = text
-      .split(/[^a-zA-Z\d.,;:]/)
+      .split(/[^a-zA-Z\d\n.,;:]/)
       .map( (e) => {
         return e.replace(/[ao]/g, "x");
       })

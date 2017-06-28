@@ -101,10 +101,10 @@ var defaultDiacriticsRemovalMap = [
 ];
 
 var diacriticsMap = {};
-for (var i=0; i < defaultDiacriticsRemovalMap .length; i++){
-    var letters = defaultDiacriticsRemovalMap [i].letters;
+for (var i=0; i < defaultDiacriticsRemovalMap.length; i++){
+    var letters = defaultDiacriticsRemovalMap[i].letters;
     for (var j=0; j < letters.length ; j++){
-        diacriticsMap[letters[j]] = defaultDiacriticsRemovalMap [i].base;
+        diacriticsMap[letters[j]] = defaultDiacriticsRemovalMap[i].base;
     }
 }
 

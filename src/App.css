@@ -19,6 +19,15 @@ body {
   font-size: small;
 }
 
+.button-clear-container {
+  margin-top: 10px;
+  margin-left: 10px;
+  position:absolute;
+  top:0;
+  left:0;
+  font-size: small;
+}
+
 .panel-container {
   padding: 0 10px;
   font-family: 'Open Sans', sans-serif;
